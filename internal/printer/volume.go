@@ -24,6 +24,7 @@ const (
 	volumeKindNFS                   = "NFS (an NFS mount that lasts the lifetime of a pod)"
 	volumeKindISCSI                 = "ISCSI (an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod)"
 	volumeKindGlusterfs             = "Glusterfs (a Glusterfs mount on the host that shares a pod's lifetime)"
+	volumeKindPersistentVolume      = "PersistentVolume"
 	volumeKindPersistentVolumeClaim = "PersistentVolumeClaim"
 	volumeKindRBD                   = "RBD (a Rados Block Device mount on the host that shares a pod's lifetime)"
 	volumeKindQuobyte               = "Quobyte (a Quobyte mount on the host that shares a pod's lifetime)"

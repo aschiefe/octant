@@ -181,6 +181,15 @@ func initNamespacedOverview() *Section {
 		IconName:       icon.OverviewConfigMap,
 	})
 
+	csPVs := NewResource(ResourceOptions{
+		Path:           "/config-and-storage/persistent-volume-claims",
+		ObjectStoreKey: store.Key{APIVersion: "v1", Kind: "PersistentVolume"},
+		ListType:       &corev1.PersistentVolumeList{},
+		ObjectType:     &corev1.PersistentVolume{},
+		Titles:         ResourceTitle{List: "Config & Storage / Persistent Volumes", Object: "Persistent Volume"},
+		IconName:       icon.OverviewPersistentVolumeClaim,
+	})
+
 	csPVCs := NewResource(ResourceOptions{
 		Path:           "/config-and-storage/persistent-volume-claims",
 		ObjectStoreKey: store.Key{APIVersion: "v1", Kind: "PersistentVolumeClaim"},
@@ -212,6 +221,7 @@ func initNamespacedOverview() *Section {
 		"/config-and-storage",
 		"Config and Storage",
 		csConfigMaps,
+		csPVs,
 		csPVCs,
 		csSecrets,
 		csServiceAccounts,

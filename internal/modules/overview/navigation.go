@@ -75,6 +75,8 @@ func configAndStorageEntries(ctx context.Context, prefix, namespace string, obje
 	neh := navigation.EntriesHelper{}
 	neh.Add("Config Maps", "config-maps", icon.OverviewConfigMap,
 		loading.IsObjectLoading(ctx, namespace, store.KeyFromGroupVersionKind(gvk.ConfigMap), objectStore))
+	neh.Add("Persistent Volume", "persistent-volume", icon.OverviewPersistentVolumeClaim,
+		loading.IsObjectLoading(ctx, namespace, store.KeyFromGroupVersionKind(gvk.PersistentVolume), objectStore))
 	neh.Add("Persistent Volume Claims", "persistent-volume-claims", icon.OverviewPersistentVolumeClaim,
 		loading.IsObjectLoading(ctx, namespace, store.KeyFromGroupVersionKind(gvk.PersistentVolumeClaim), objectStore))
 	neh.Add("Secrets", "secrets", icon.OverviewSecret,

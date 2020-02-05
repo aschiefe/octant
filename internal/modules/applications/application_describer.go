@@ -33,6 +33,7 @@ var allowed = []schema.GroupVersionKind{
 	gvk.Ingress,
 	gvk.Service,
 	gvk.ConfigMap,
+	gvk.PersistentVolume,
 	gvk.PersistentVolumeClaim,
 	gvk.Secret,
 	gvk.ServiceAccount,

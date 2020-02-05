@@ -29,6 +29,7 @@ var (
 		objectReferenceKey{apiVersion: "extensions/v1beta1", kind: "Ingress"}: "discovery-and-load-balancing/ingresses",
 		objectReferenceKey{apiVersion: "v1", kind: "Service"}:                 "discovery-and-load-balancing/services",
 		objectReferenceKey{apiVersion: "v1", kind: "ConfigMap"}:               "config-and-storage/config-maps",
+		objectReferenceKey{apiVersion: "v1", kind: "PersistentVolume"}:        "config-and-storage/persistent-volume",
 		objectReferenceKey{apiVersion: "v1", kind: "PersistentVolumeClaim"}:   "config-and-storage/persistent-volume-claims",
 		objectReferenceKey{apiVersion: "v1", kind: "Secret"}:                  "config-and-storage/secrets",
 		objectReferenceKey{apiVersion: "v1", kind: "ServiceAccount"}:          "config-and-storage/service-accounts",

@@ -30,6 +30,7 @@ var (
 		gvk.Service,
 		gvk.ConfigMap,
 		gvk.Secret,
+		gvk.PersistentVolume,
 		gvk.PersistentVolumeClaim,
 		gvk.ServiceAccount,
 		gvk.RoleBinding,
@@ -76,6 +77,8 @@ func gvkPath(namespace, apiVersion, kind, name string) (string, error) {
 		p = "/config-and-storage/secrets"
 	case apiVersion == "v1" && kind == "ConfigMap":
 		p = "/config-and-storage/config-maps"
+	case apiVersion == "v1" && kind == "PersistentVolume":
+		p = "/config-and-storage/persistent-volume"
 	case apiVersion == "v1" && kind == "PersistentVolumeClaim":
 		p = "/config-and-storage/persistent-volume-claims"
 	case apiVersion == "v1" && kind == "ServiceAccount":
